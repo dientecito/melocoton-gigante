@@ -1,5 +1,10 @@
+// SplashScreen.jsx
 import { useState } from 'react';
 import './SplashScreen.css';
+
+// Importar imágenes desde src/assets
+import peachLeft from '../assets/peach-left.png';
+import peachRight from '../assets/peach-right.png';
 
 function SplashScreen({ onFinish }) {
   const [isOpen, setIsOpen] = useState(false);
@@ -25,12 +30,12 @@ function SplashScreen({ onFinish }) {
       onClick={handleClick}
     >
       <img
-        src="src/assets/peach-left.png"
+        src={peachLeft}
         alt="Peach left"
         className={`peach left ${isOpen ? 'open' : ''}`}
       />
       <img
-        src="src/assets/peach-right.png"
+        src={peachRight}
         alt="Peach right"
         className={`peach right ${isOpen ? 'open' : ''}`}
       />

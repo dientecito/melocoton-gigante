@@ -2,11 +2,15 @@
 import { Link } from "react-router-dom";
 import "./Home.css";
 
+// Importar imágenes desde src/assets
+import fotoIntro from "../assets/foto_intro.jpg";
+import radio from "../assets/radio_sin_fondo.png";
+
 function Home() {
   return (
     <div className="home-container">
       <div className="home-image">
-        <img src="src/assets/foto_intro.jpg" alt="Banda" />
+        <img src={fotoIntro} alt="Banda" />
       </div>
       <div className="home-text">
         <h1>Melocotón Gigante es...</h1>
@@ -26,7 +30,7 @@ function Home() {
         {/* NUEVA IMAGEN CON ENLACE */}
         <Link to="/music">
           <img 
-            src="src/assets/radio_sin_fondo.png" 
+            src={radio} 
             alt="Ir a Music" 
             className="clickable-image"
           />

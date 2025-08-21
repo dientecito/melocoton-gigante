@@ -18,7 +18,8 @@ function App() {
       {showSplash ? (
         <SplashScreen onFinish={() => setShowSplash(false)} />
       ) : (
-        <Router>
+        // Aquí añadimos basename
+        <Router basename="/melocoton-gigante">
           <Navbar />
           <main>
             <Routes>
