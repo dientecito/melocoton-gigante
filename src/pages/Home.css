@@ -1,0 +1,61 @@
+
+/* Home.css */
+.home-container {
+  display: grid;
+  grid-template-columns: 1fr 1fr; 
+  gap: 2rem;
+  padding: 2rem 8%;   /* margen lateral: 8% del ancho */
+  align-items: center;
+}
+
+.home-text {
+  text-align: left;
+}
+
+.home-text h1 {
+  font-size: 2rem;   /* más pequeño que antes */
+  margin-bottom: 1rem;
+}
+
+.home-text p {
+  font-size: 1rem;
+  line-height: 1.5;
+}
+
+.home-image img {
+  max-width: 80%;   /* reduce la imagen al 80% de su columna */
+  height: auto;
+  border-radius: 12px;
+}
+
+/* En pantallas pequeñas */
+@media (max-width: 768px) {
+  .home-container {
+    grid-template-columns: 1fr;
+    text-align: center;
+    padding: 1.5rem;   /* menos margen lateral en móvil */
+  }
+
+  .home-text {
+    text-align: center;
+  }
+
+  .home-image img {
+    max-width: 100%; /* que ocupe el ancho disponible en móvil */
+  }
+}
+
+/*IMG de radio*/
+.clickable-image {
+  display: block;
+  margin: 20px auto 0 auto; /* centra la imagen y separa del texto */
+  max-width: 300px; /* ajusta el tamaño */
+  cursor: pointer; /* indica que se puede clicar */
+  transition: transform 0.2s;
+}
+
+.clickable-image:hover {
+  transform: scale(1.05); /* pequeño efecto al pasar el ratón */
+}
+
+

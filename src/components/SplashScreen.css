@@ -1,0 +1,52 @@
+.splash-container {
+  position: fixed;
+  inset: 0;
+  background: #ffe5d1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden;
+  z-index: 2000;
+  cursor: pointer;
+  opacity: 1;
+  transition: opacity 0.8s ease-in-out;
+}
+
+.splash-container.fade-out {
+  opacity: 0;
+  pointer-events: none;
+}
+
+.peach {
+  width: 300px;   /* ajusta el tamaño según tus imágenes */
+  height: auto;
+  transition: transform 1s ease-in-out;
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+}
+
+/* Mitad izquierda */
+.peach.left {
+  left: 50%;
+  transform: translate(-100%, -50%); /* justo pegada al centro */
+  z-index: 2;
+}
+
+/* Mitad derecha */
+.peach.right {
+  left: 50%;
+  transform: translate(0, -50%); /* justo pegada al centro */
+  z-index: 1;
+}
+
+/* Animación de apertura */
+.peach.left.open {
+  transform: translate(-140%, -50%) rotate(-15deg);
+}
+
+.peach.right.open {
+  transform: translate(40%, -50%) rotate(15deg);
+}
+
+
