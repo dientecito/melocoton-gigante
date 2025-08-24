@@ -18,15 +18,18 @@ body {
   min-width: 320px;
   min-height: 100vh;
 
-  background-image: url('./assets/fondo.webp');
-  background-size: cover;
-  background-position: center;
-  background-repeat: no-repeat;
+  /* Dos imágenes de fondo: textura + imagen */
+  background-image: url('https://www.transparenttextures.com/patterns/asfalt-dark.png'),
+                    url('./assets/fondo.webp');
+  background-repeat: repeat, no-repeat; /* textura repetida, fondo sin repetir */
+  background-size: auto, cover;         /* textura tamaño original, fondo ajustado */
+  background-position: top left, center;
 
   display: flex;
   flex-direction: column;
   color: #fff;
 }
+
 
 /* Navbar fija con efecto blur */
 header {

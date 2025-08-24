@@ -21,7 +21,7 @@ function SplashScreen({ onFinish }) {
     // luego quitamos el splash del todo
     setTimeout(() => {
       onFinish();
-    }, 2000); 
+    }, 1500); 
   };
 
   return (

@@ -1,18 +1,16 @@
 /* Navbar.css */
-
 header {
   display: flex;
   align-items: center;
   justify-content: space-between;
   padding: 1rem 2rem;
-  background-image: url('../assets/textura_barra.webp'); /* Fondo de la barra */
-  background-size: cover;
-  background-position: center;
+  background: none;
   position: fixed;
   top: 0;
   width: 100%;
   z-index: 1000;
 }
+
 
 /* Logo */
 .logo {
@@ -67,7 +65,7 @@ nav a:hover {
 
 /* Pseudo-elementos tribales */
 nav a::before {
-  content: '⚡';
+  content: '🍑';
   position: absolute;
   left: 8px;
   top: 50%;
@@ -76,7 +74,7 @@ nav a::before {
 }
 
 nav a::after {
-  content: '☆';
+  content: '✮';
   position: absolute;
   right: 8px;
   top: 50%;

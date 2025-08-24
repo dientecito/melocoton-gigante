@@ -1,7 +1,14 @@
 .splash-container {
   position: fixed;
   inset: 0;
-  background: #ffe5d1;
+
+  /* Igual que el body */
+  background-image: url('https://www.transparenttextures.com/patterns/asfalt-dark.png'),
+                    url('./assets/fondo.webp');
+  background-repeat: repeat, no-repeat;
+  background-size: auto, cover;
+  background-position: top left, center;
+
   display: flex;
   justify-content: center;
   align-items: center;
