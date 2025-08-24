@@ -9,6 +9,7 @@ import Tour from './pages/Tour';
 import Gallery from './pages/Gallery';
 import Contact from './pages/Contact';
 import SplashScreen from './components/SplashScreen';
+import ScrollToTop from './components/ScrollToTop';
 
 function App() {
   const [showSplash, setShowSplash] = useState(true);
@@ -18,8 +19,8 @@ function App() {
       {showSplash ? (
         <SplashScreen onFinish={() => setShowSplash(false)} />
       ) : (
-        // Aquí añadimos basename
         <Router basename="/melocoton-gigante">
+          <ScrollToTop /> 
           <Navbar />
           <main>
             <Routes>

@@ -12,7 +12,6 @@ function Navbar() {
         <Link to="/gallery">Galería</Link>
         <Link to="/tour">Tour</Link>
         <Link to="/merch">Tienda</Link>
-        <Link to="/contact">Contact</Link>
       </nav>
     </header>
   );
