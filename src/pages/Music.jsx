@@ -38,25 +38,36 @@ y no lo necesita pa' nada.
     Maddi: { text: "", image: "images/maddi.jpg" },
     "El Entendimiento": {
       text: `
-A menudo y sin querer juzgo antes de conocer,
+A menudo y sin querer, juzgo antes de conocer,
 a menudo me veo teniendo que parar los pies,
-a menudo creo que ya lo se todo, 
+a menudo creo que ya lo sé todo,
 que no hay nada que aprender.
 
-Se me olvida, que hay entornos muy diversos,
+Se me olvida que hay entornos muy diversos,
 personas diferentes, con sus uñas, con sus dientes,
 con sus risas, con sus besos...
-me veo poniendo peso, a algo que aún no se.
+me veo poniendo peso a algo que aún no sé.
 
 Y sin rodeos, quiero decir "lo siento",
 reconocer mis fallos, aprender algo de ellos, repetirlos,
 porque sé que aprendo rápido,
 pero al tiempo también olvido...
 
-Y pido paciencia, a mi y a las que quiero,
-porque la vida es un proceso de autocritica e intentos,
+Y pido paciencia, a mí y a las que quiero,
+porque la vida es un proceso de autocrítica e intentos,
 y quiero teneros cerca y ayudarnos entre todas
 y romper esas barreras que están obstaculizando el entendimiento...
+
+Miradas cruzadas, que a veces no dicen todo,
+pero en ocasiones, y como el silencio, no dicen nada.
+Expresiones corporales, movimientos discontinuos,
+que me hacen escuchar que es posible entendernos.
+
+Y bailar y convocar el sentimiento,
+veo empatizar y meterme en tus pies,
+y emocionarme cuando dices que ahora estás sufriendo,
+quiero acompañar tus palabras con mi aliento,
+lanzao un boomerang que retorna: el entendimiento...
 `,
       image: "images/img_letras/el_entendimiento.jpg",
       extraImage: "images/img_letras/el_entendimiento_2.jpg",
@@ -72,13 +83,13 @@ y romper esas barreras que están obstaculizando el entendimiento...
 
   // URLs de SoundCloud
   const soundcloudLinks = {
-    "Bajo de Gali": "https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/TRACK_ID_1",
+    "Bajo de Gali": "https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/2158021167&color=%239c5824&auto_play=true&hide_related=false&show_comments=true&show_user=true&show_reposts=false&show_teaser=true&visual=true",
     Felix: "https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/TRACK_ID_2",
     "Restaurante Chino": "https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/TRACK_ID_3",
     "Opel Corsa": "https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/TRACK_ID_4",
     Maddi: "https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/TRACK_ID_5",
-    "El Entendimiento": "https://soundcloud.com/melocotongigante/el-entendimiento-6",
-    Marta: "https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/TRACK_ID_7",
+    "El Entendimiento": "https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/2158021188&color=%239c5824&auto_play=true&hide_related=false&show_comments=true&show_user=true&show_reposts=false&show_teaser=true&visual=true",
+    Marta: "https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/2158021176&color=%239c5824&auto_play=true&hide_related=false&show_comments=true&show_user=true&show_reposts=false&show_teaser=true&visual=true",
     Lujuria: "https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/TRACK_ID_8",
     Ion: "https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/TRACK_ID_9",
     "Besos de Mariposa": "https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/TRACK_ID_10",
