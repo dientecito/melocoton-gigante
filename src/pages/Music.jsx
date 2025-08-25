@@ -32,10 +32,68 @@ y no lo necesita pa' nada.
 `,
       image: "images/img_letras/bajo_de_gali.jpg",
     },
-    Felix: { text: "", image: "images/felix.jpg" },
-    "Restaurante Chino": { text: "Letra de Restaurante Chino...", image: "images/restaurante_chino.jpg" },
-    "Opel Corsa": { text: "Letra de Opel Corsa...", image: "images/opel_corsa.jpg" },
-    Maddi: { text: "", image: "images/maddi.jpg" },
+    Felix: { text: "🎺🎺🎺", image: "images/img_letras/felix.jpg" },
+    "Restaurante Chino": { 
+      text: `Hoy no se ven las estrellas,
+qué más da...
+Voy a beber de las luces
+de la ciudad.
+
+Hoy te invitaré a cenar
+a un restaurante chino;
+he comprado marihuana
+a un amigo de un amigo.
+
+Te espero en el portal,
+aparcado en doble fila,
+escuchando a Los Raimundo
+y mordiéndome las uñas.
+
+No te asustes si acelero,
+amo la velocidad;
+tú solo intenta seguirme,
+que le jodan al compás.
+
+Te invitaré a volar,
+imitando a las cometas;
+y cuando rompan la cuerda,
+¿dónde iremos a parar?
+
+Todo lo que sube, baja,
+los trenes que pasan, pasan,
+y nosotros, como idiotas,
+desperdiciando el momento:
+el momento de brillar,
+el momento de sentir,
+el momento de lucir
+nuestro mejor vestido.
+
+Le digo que sí,
+le digo que no;
+le digo que a la vida
+hay que decirle cuatro cosas.
+Que si no se las dices,
+te vas a arrepentir;
+porque al final del camino
+todo acaba y nada empieza.
+
+Hoy no se ven las estrellas,
+qué más da...
+Voy a beber de las luces
+de la ciudad.
+
+Pisa el acelerador,
+ya no quiero pensar más;
+enséñame algo bonito,
+una cala en este mar.
+
+Estoy jodido, busco un amigo
+que me ayude a escampar,
+que me permita ser yo
+de verdad`
+      , image: "images/img_letras/restaurante_chino.jpg" },
+    "Opel Corsa": { text: "Letra de Opel Corsa...", image: "images/img_letras/opel_corsa.jpg" },
+    Maddi: { text: "🎻🎻🎻", image: "images/maddi.jpg" },
     "El Entendimiento": {
       text: `
 A menudo y sin querer, juzgo antes de conocer,
@@ -58,7 +116,7 @@ porque la vida es un proceso de autocrítica e intentos,
 y quiero teneros cerca y ayudarnos entre todas
 y romper esas barreras que están obstaculizando el entendimiento...
 
-Miradas cruzadas, que a veces no dicen todo,
+Miradas cruzadas, que a veces lo dicen todo,
 pero en ocasiones, y como el silencio, no dicen nada.
 Expresiones corporales, movimientos discontinuos,
 que me hacen escuchar que es posible entendernos.
@@ -72,60 +130,91 @@ lanzao un boomerang que retorna: el entendimiento...
       image: "images/img_letras/el_entendimiento.jpg",
       extraImage: "images/img_letras/el_entendimiento_2.jpg",
     },
-    Marta: { text: "", image: "images/img_letras/marta.jpg" },
-    Lujuria: { text: "Letra de Lujuria...", image: "images/lujuria.jpg" },
-    Ion: { text: "", image: "images/ion.jpg" },
-    "Besos de Mariposa": { text: "Letra de Besos de Mariposa...", image: "images/besos_de_mariposa.jpg" },
-    Hipertensión: { text: "Letra de Hipertensión...", image: "images/hipertension.jpg" },
-    "Aparición Divina": { text: "Letra de Aparición Divina...", image: "images/aparicion_divina.jpg" },
-    "No Quiero Saber": { text: "Letra de No Quiero Saber...", image: "images/no_quiero_saber.jpg" },
+    Marta: { text: "🎹🎹🎹", image: "images/img_letras/marta.jpg" },
+    Lujuria: { text: "Letra de Lujuria...", image: "images/img_letras/lujuria.jpg" },
+    Ion: { text: "🎸🎸🎸", image: "images/img_letras/ion.jpg" },
+    "Besos de Mariposa": { text: "Letra de Besos de Mariposa...", image: "images/img_letras/besos_de_mariposa.jpg" },
+    Hipertensión: { text: "Letra de Hipertensión...", image: "images/img_letras/hipertension.jpg" },
+    "Aparición Divina": { text: "Letra de Aparición Divina...", image: "images/img_letras/aparicion_divina.jpg" },
+    "No Quiero Saber": { text: "Letra de No Quiero Saber...", image: "images/img_letras/no_quiero_saber.jpg" },
   };
 
   // URLs de SoundCloud
   const soundcloudLinks = {
-    "Bajo de Gali": "https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/2158021167&color=%239c5824&auto_play=true&hide_related=false&show_comments=true&show_user=true&show_reposts=false&show_teaser=true&visual=true",
-    Felix: "https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/TRACK_ID_2",
-    "Restaurante Chino": "https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/TRACK_ID_3",
-    "Opel Corsa": "https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/TRACK_ID_4",
-    Maddi: "https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/TRACK_ID_5",
-    "El Entendimiento": "https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/2158021188&color=%239c5824&auto_play=true&hide_related=false&show_comments=true&show_user=true&show_reposts=false&show_teaser=true&visual=true",
-    Marta: "https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/2158021176&color=%239c5824&auto_play=true&hide_related=false&show_comments=true&show_user=true&show_reposts=false&show_teaser=true&visual=true",
-    Lujuria: "https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/TRACK_ID_8",
-    Ion: "https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/TRACK_ID_9",
-    "Besos de Mariposa": "https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/TRACK_ID_10",
-    Hipertensión: "https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/TRACK_ID_11",
-    "Aparición Divina": "https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/TRACK_ID_12",
-    "No Quiero Saber": "https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/TRACK_ID_13",
+    "Bajo de Gali": "https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/2158021167&color=%23ff5500&auto_play=false&hide_related=false&show_comments=true&show_user=true&show_reposts=false&show_teaser=true&visual=true",
+    Felix: "https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/2158021164&color=%23ff5500&auto_play=false&hide_related=false&show_comments=true&show_user=true&show_reposts=false&show_teaser=true&visual=true",
+    "Restaurante Chino": "https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/2158021158&color=%23ff5500&auto_play=false&hide_related=false&show_comments=true&show_user=true&show_reposts=false&show_teaser=true&visual=true",
+    "Opel Corsa": "https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/2158021185&color=%23ff5500&auto_play=false&hide_related=false&show_comments=true&show_user=true&show_reposts=false&show_teaser=true&visual=true",
+    Maddi: "https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/2158021173&color=%23ff5500&auto_play=false&hide_related=false&show_comments=true&show_user=true&show_reposts=false&show_teaser=true&visual=true",
+    "El Entendimiento": "https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/2158021188&color=%23ff5500&auto_play=false&hide_related=false&show_comments=true&show_user=true&show_reposts=false&show_teaser=true&visual=true",
+    Marta: "https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/2158021176&color=%23ff5500&auto_play=false&hide_related=false&show_comments=true&show_user=true&show_reposts=false&show_teaser=true&visual=true",
+    Lujuria: "https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/2158021152&color=%23ff5500&auto_play=false&hide_related=false&show_comments=true&show_user=true&show_reposts=false&show_teaser=true&visual=true",
+    Ion: "https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/2158021179&color=%23ff5500&auto_play=false&hide_related=false&show_comments=true&show_user=true&show_reposts=false&show_teaser=true&visual=true",
+    "Besos de Mariposa": "https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/2158021170&color=%23ff5500&auto_play=false&hide_related=false&show_comments=true&show_user=true&show_reposts=false&show_teaser=true&visual=true",
+    Hipertensión: "https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/2158021161&color=%23ff5500&auto_play=false&hide_related=false&show_comments=true&show_user=true&show_reposts=false&show_teaser=true&visual=true",
+    "Aparición Divina": "https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/2158021155&color=%23ff5500&auto_play=false&hide_related=false&show_comments=true&show_user=true&show_reposts=false&show_teaser=true&visual=true",
+    "No Quiero Saber": "https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/2158021182&color=%23ff5500&auto_play=false&hide_related=false&show_comments=true&show_user=true&show_reposts=false&show_teaser=true&visual=true",
   };
 
   const [selectedSong, setSelectedSong] = useState(null);
 
-  return (
+ return (
     <div style={{ display: "flex", alignItems: "flex-start", gap: "3rem", padding: "1rem", minHeight: "100vh" }}>
       {/* Columna izquierda */}
       <div style={{ flex: "0 0 320px", marginTop: "6rem" }}>
         {!selectedSong ? (
-          <img
-            src="images/mutante_cd.webp"
-            alt="Portada del disco"
-            style={{ width: "100%", display: "block", borderRadius: "20px", boxShadow: `2px 2px 0 #000, -2px -2px 0 #000, 3px -3px 0 #000, -3px 3px 0 #000`, objectFit: "cover" }}
-          />
+          <>
+            <img
+              src="images/mutante_cd.webp"
+              alt="Portada del disco"
+              style={{
+                width: "100%",
+                display: "block",
+                borderRadius: "20px",
+                boxShadow: `2px 2px 0 #000, -2px -2px 0 #000, 3px -3px 0 #000, -3px 3px 0 #000`,
+                objectFit: "cover",
+              }}
+            />
+            {/* Reproductor SoundCloud del disco completo */}
+            <iframe
+              width="100%"
+              height="450"
+              scrolling="no"
+              frameBorder="no"
+              allow="autoplay"
+              src="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/playlists/2070335424&color=%23ff5500&auto_play=false&hide_related=false&show_comments=true&show_user=true&show_reposts=false&show_teaser=true"
+              style={{ marginTop: "1rem", borderRadius: "12px" }}
+            ></iframe>
+          </>
         ) : (
           <>
             <img
               src={lyrics[selectedSong].image}
               alt={selectedSong}
-              style={{ width: "100%", display: "block", borderRadius: "20px", boxShadow: `2px 2px 0 #000, -2px -2px 0 #000, 3px -3px 0 #000, -3px 3px 0 #000`, objectFit: "cover" }}
+              style={{
+                width: "100%",
+                display: "block",
+                borderRadius: "20px",
+                boxShadow: `2px 2px 0 #000, -2px -2px 0 #000, 3px -3px 0 #000, -3px 3px 0 #000`,
+                objectFit: "cover",
+              }}
             />
             {selectedSong === "El Entendimiento" && lyrics[selectedSong].extraImage && (
               <img
                 src={lyrics[selectedSong].extraImage}
                 alt="Extra El Entendimiento"
-                style={{ width: "100%", display: "block", borderRadius: "20px", marginTop: "1rem", boxShadow: `2px 2px 0 #000, -2px -2px 0 #000, 3px -3px 0 #000, -3px 3px 0 #000`, objectFit: "cover" }}
+                style={{
+                  width: "100%",
+                  display: "block",
+                  borderRadius: "20px",
+                  marginTop: "1rem",
+                  boxShadow: `2px 2px 0 #000, -2px -2px 0 #000, 3px -3px 0 #000, -3px 3px 0 #000`,
+                  objectFit: "cover",
+                }}
               />
             )}
 
-            {/* Reproductor SoundCloud */}
+            {/* Reproductor SoundCloud individual */}
             {soundcloudLinks[selectedSong] && (
               <iframe
                 width="100%"
@@ -167,9 +256,23 @@ lanzao un boomerang que retorna: el entendimiento...
               {selectedSong}
             </h3>
 
-            <p style={{ fontSize: "1.2rem", lineHeight: "1.8", whiteSpace: "pre-wrap", color: "#fff" }}>
-              {lyrics[selectedSong].text}
-            </p>
+            <p
+  style={{
+    fontSize: (selectedSong === "El Entendimiento" || selectedSong === "Restaurante Chino") ? "1rem" : "1.2rem",
+    lineHeight: (selectedSong === "El Entendimiento" || selectedSong === "Restaurante Chino") ? "1.4" : "1.8",
+    whiteSpace: "pre-wrap",
+    color: "#fff",
+    columns: selectedSong === "Restaurante Chino" ? "2" : "1",   // doble columna solo para Restaurante Chino
+    columnGap: selectedSong === "Restaurante Chino" ? "2rem" : "0", // separación entre columnas
+    textAlign: selectedSong === "Restaurante Chino" ? "justify" : "left", // para que quede más prolijo en dos columnas
+  }}
+>
+  {lyrics[selectedSong].text}
+</p>
+
+
+
+
 
             <button
               onClick={() => setSelectedSong(null)}
