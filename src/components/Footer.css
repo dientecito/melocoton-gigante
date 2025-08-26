@@ -1,0 +1,40 @@
+.footer {
+  padding: 1rem;
+  color: #fff;
+  text-align: center;
+
+}
+
+.footer-img {
+  width: 300px;       /* tamaño base */
+  max-width: 80%;     /* se ajusta a pantallas pequeñas */
+  height: auto;
+  display: block;
+  margin: 0 auto 1rem auto;
+  border-radius: 12px; /* opcional: bordes redondeados */
+}
+
+.footer-text {
+  font-size: 1rem;
+}
+
+/* --- Responsive --- */
+@media (max-width: 768px) {
+  .footer-img {
+    width: 200px; /* más pequeño en tablets */
+  }
+
+  .footer-text {
+    font-size: 0.9rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .footer-img {
+    width: 150px; /* más pequeño en móviles */
+  }
+
+  .footer-text {
+    font-size: 0.8rem;
+  }
+}

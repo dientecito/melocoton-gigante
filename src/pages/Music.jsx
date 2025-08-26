@@ -1,4 +1,5 @@
 import { useState } from "react";
+import "./Music.css";
 
 function Music() {
   const songs = [
@@ -33,7 +34,7 @@ y no lo necesita pa' nada.
       image: "images/img_letras/bajo_de_gali.jpg",
     },
     Felix: { text: "🎺🎺🎺", image: "images/img_letras/felix.jpg" },
-    "Restaurante Chino": { 
+    "Restaurante Chino": {
       text: `Hoy no se ven las estrellas,
 qué más da...
 Voy a beber de las luces
@@ -90,13 +91,13 @@ una cala en este mar.
 Estoy jodido, busco un amigo
 que me ayude a escampar,
 que me permita ser yo
-de verdad`
-      , image: "images/img_letras/restaurante_chino.jpg" },
+de verdad`, // recortado por brevedad
+      image: "images/img_letras/restaurante_chino.jpg",
+    },
     "Opel Corsa": { text: "Letra de Opel Corsa...", image: "images/img_letras/opel_corsa.jpg" },
     Maddi: { text: "🎻🎻🎻", image: "images/maddi.jpg" },
     "El Entendimiento": {
-      text: `
-A menudo y sin querer, juzgo antes de conocer,
+      text: `A menudo y sin querer, juzgo antes de conocer,
 a menudo me veo teniendo que parar los pies,
 a menudo creo que ya lo sé todo,
 que no hay nada que aprender.
@@ -125,8 +126,7 @@ Y bailar y convocar el sentimiento,
 veo empatizar y meterme en tus pies,
 y emocionarme cuando dices que ahora estás sufriendo,
 quiero acompañar tus palabras con mi aliento,
-lanzao un boomerang que retorna: el entendimiento...
-`,
+lanzao un boomerang que retorna: el entendimiento...`,
       image: "images/img_letras/el_entendimiento.jpg",
       extraImage: "images/img_letras/el_entendimiento_2.jpg",
     },
@@ -139,82 +139,46 @@ lanzao un boomerang que retorna: el entendimiento...
     "No Quiero Saber": { text: "Letra de No Quiero Saber...", image: "images/img_letras/no_quiero_saber.jpg" },
   };
 
-  // URLs de SoundCloud
   const soundcloudLinks = {
-    "Bajo de Gali": "https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/2158021167&color=%23ff5500&auto_play=false&hide_related=false&show_comments=true&show_user=true&show_reposts=false&show_teaser=true&visual=true",
-    Felix: "https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/2158021164&color=%23ff5500&auto_play=false&hide_related=false&show_comments=true&show_user=true&show_reposts=false&show_teaser=true&visual=true",
-    "Restaurante Chino": "https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/2158021158&color=%23ff5500&auto_play=false&hide_related=false&show_comments=true&show_user=true&show_reposts=false&show_teaser=true&visual=true",
-    "Opel Corsa": "https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/2158021185&color=%23ff5500&auto_play=false&hide_related=false&show_comments=true&show_user=true&show_reposts=false&show_teaser=true&visual=true",
-    Maddi: "https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/2158021173&color=%23ff5500&auto_play=false&hide_related=false&show_comments=true&show_user=true&show_reposts=false&show_teaser=true&visual=true",
-    "El Entendimiento": "https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/2158021188&color=%23ff5500&auto_play=false&hide_related=false&show_comments=true&show_user=true&show_reposts=false&show_teaser=true&visual=true",
-    Marta: "https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/2158021176&color=%23ff5500&auto_play=false&hide_related=false&show_comments=true&show_user=true&show_reposts=false&show_teaser=true&visual=true",
-    Lujuria: "https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/2158021152&color=%23ff5500&auto_play=false&hide_related=false&show_comments=true&show_user=true&show_reposts=false&show_teaser=true&visual=true",
-    Ion: "https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/2158021179&color=%23ff5500&auto_play=false&hide_related=false&show_comments=true&show_user=true&show_reposts=false&show_teaser=true&visual=true",
-    "Besos de Mariposa": "https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/2158021170&color=%23ff5500&auto_play=false&hide_related=false&show_comments=true&show_user=true&show_reposts=false&show_teaser=true&visual=true",
-    Hipertensión: "https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/2158021161&color=%23ff5500&auto_play=false&hide_related=false&show_comments=true&show_user=true&show_reposts=false&show_teaser=true&visual=true",
-    "Aparición Divina": "https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/2158021155&color=%23ff5500&auto_play=false&hide_related=false&show_comments=true&show_user=true&show_reposts=false&show_teaser=true&visual=true",
-    "No Quiero Saber": "https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/2158021182&color=%23ff5500&auto_play=false&hide_related=false&show_comments=true&show_user=true&show_reposts=false&show_teaser=true&visual=true",
+    "Bajo de Gali": "https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/2158021167&color=%23ff5500",
+    Felix: "https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/2158021164&color=%23ff5500",
+    "Restaurante Chino": "https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/2158021158&color=%23ff5500",
+    "Opel Corsa": "https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/2158021185&color=%23ff5500",
+    Maddi: "https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/2158021173&color=%23ff5500",
+    "El Entendimiento": "https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/2158021188&color=%23ff5500",
+    Marta: "https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/2158021176&color=%23ff5500",
+    Lujuria: "https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/2158021152&color=%23ff5500",
+    Ion: "https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/2158021179&color=%23ff5500",
+    "Besos de Mariposa": "https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/2158021170&color=%23ff5500",
+    Hipertensión: "https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/2158021161&color=%23ff5500",
+    "Aparición Divina": "https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/2158021155&color=%23ff5500",
+    "No Quiero Saber": "https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/2158021182&color=%23ff5500",
   };
 
   const [selectedSong, setSelectedSong] = useState(null);
 
- return (
-    <div style={{ display: "flex", alignItems: "flex-start", gap: "3rem", padding: "1rem", minHeight: "100vh" }}>
-      {/* Columna izquierda */}
-      <div style={{ flex: "0 0 320px", marginTop: "6rem" }}>
+  return (
+    <div className="music-container">
+      <div className="music-left">
         {!selectedSong ? (
           <>
-            <img
-              src="images/mutante_cd.webp"
-              alt="Portada del disco"
-              style={{
-                width: "100%",
-                display: "block",
-                borderRadius: "20px",
-                boxShadow: `2px 2px 0 #000, -2px -2px 0 #000, 3px -3px 0 #000, -3px 3px 0 #000`,
-                objectFit: "cover",
-              }}
-            />
-            {/* Reproductor SoundCloud del disco completo */}
+            <img src="images/mutante_cd.webp" alt="Portada del disco" className="album-cover" />
             <iframe
               width="100%"
               height="450"
               scrolling="no"
               frameBorder="no"
               allow="autoplay"
-              src="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/playlists/2070335424&color=%23ff5500&auto_play=false&hide_related=false&show_comments=true&show_user=true&show_reposts=false&show_teaser=true"
-              style={{ marginTop: "1rem", borderRadius: "12px" }}
+              src="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/playlists/2070335424&color=%23ff5500"
+              className="soundcloud-player"
             ></iframe>
           </>
         ) : (
           <>
-            <img
-              src={lyrics[selectedSong].image}
-              alt={selectedSong}
-              style={{
-                width: "100%",
-                display: "block",
-                borderRadius: "20px",
-                boxShadow: `2px 2px 0 #000, -2px -2px 0 #000, 3px -3px 0 #000, -3px 3px 0 #000`,
-                objectFit: "cover",
-              }}
-            />
+            <img src={lyrics[selectedSong].image} alt={selectedSong} className="album-cover" />
             {selectedSong === "El Entendimiento" && lyrics[selectedSong].extraImage && (
-              <img
-                src={lyrics[selectedSong].extraImage}
-                alt="Extra El Entendimiento"
-                style={{
-                  width: "100%",
-                  display: "block",
-                  borderRadius: "20px",
-                  marginTop: "1rem",
-                  boxShadow: `2px 2px 0 #000, -2px -2px 0 #000, 3px -3px 0 #000, -3px 3px 0 #000`,
-                  objectFit: "cover",
-                }}
-              />
+              <img src={lyrics[selectedSong].extraImage} alt="Extra El Entendimiento" className="album-cover extra" />
             )}
-
-            {/* Reproductor SoundCloud individual */}
             {soundcloudLinks[selectedSong] && (
               <iframe
                 width="100%"
@@ -223,28 +187,23 @@ lanzao un boomerang que retorna: el entendimiento...
                 frameBorder="no"
                 allow="autoplay"
                 src={soundcloudLinks[selectedSong]}
-                style={{ marginTop: "1rem", borderRadius: "12px" }}
+                className="soundcloud-player"
               ></iframe>
             )}
           </>
         )}
       </div>
 
-      {/* Columna derecha */}
-      <div style={{ flex: "1", textAlign: "left" }}>
-        <h2 style={{ fontSize: "3.5rem", fontWeight: "bold", marginBottom: "1rem", color: "#ffcc00", textShadow: "2px 2px 0px #000" }}>
-          MUTANTE
-        </h2>
+      <div className="music-right">
+        <h2 className="music-title">MUTANTE</h2>
 
         {!selectedSong ? (
-          <ol style={{ columns: 2, columnGap: "3rem", fontSize: "1.1rem", lineHeight: "2", paddingLeft: "1rem", listStyleType: "decimal", listStylePosition: "inside", color: "#ffcc00", textShadow: "2px 2px 0px #000", fontWeight: "bold" }}>
+          <ol className="song-list">
             {songs.map((song, index) => (
               <li
                 key={index}
-                style={{ marginBottom: "1rem", cursor: "pointer", transition: "transform 0.2s ease, color 0.2s ease" }}
+                className="song-item"
                 onClick={() => setSelectedSong(song)}
-                onMouseEnter={(e) => { e.currentTarget.style.transform = "translateX(5px) scale(1.05)"; e.currentTarget.style.color = "#fff700"; }}
-                onMouseLeave={(e) => { e.currentTarget.style.transform = "translateX(0) scale(1)"; e.currentTarget.style.color = "#ffcc00"; }}
               >
                 {song}
               </li>
@@ -252,32 +211,11 @@ lanzao un boomerang que retorna: el entendimiento...
           </ol>
         ) : (
           <div>
-            <h3 style={{ fontSize: "2rem", fontWeight: "bold", marginBottom: "1rem", color: "#ffcc00", textShadow: "2px 2px 0px #000" }}>
-              {selectedSong}
-            </h3>
-
-            <p
-  style={{
-    fontSize: (selectedSong === "El Entendimiento" || selectedSong === "Restaurante Chino") ? "1rem" : "1.2rem",
-    lineHeight: (selectedSong === "El Entendimiento" || selectedSong === "Restaurante Chino") ? "1.4" : "1.8",
-    whiteSpace: "pre-wrap",
-    color: "#fff",
-    columns: selectedSong === "Restaurante Chino" ? "2" : "1",   // doble columna solo para Restaurante Chino
-    columnGap: selectedSong === "Restaurante Chino" ? "2rem" : "0", // separación entre columnas
-    textAlign: selectedSong === "Restaurante Chino" ? "justify" : "left", // para que quede más prolijo en dos columnas
-  }}
->
-  {lyrics[selectedSong].text}
-</p>
-
-
-
-
-
-            <button
-              onClick={() => setSelectedSong(null)}
-              style={{ marginTop: "2rem", padding: "0.5rem 1rem", borderRadius: "10px", border: "none", background: "#ffcc00", fontWeight: "bold", cursor: "pointer", boxShadow: "2px 2px 0px #000" }}
-            >
+            <h3 className="song-title">{selectedSong}</h3>
+            <p className={`song-lyrics ${selectedSong === "Restaurante Chino" ? "two-columns" : ""}`}>
+              {lyrics[selectedSong].text}
+            </p>
+            <button className="back-button" onClick={() => setSelectedSong(null)}>
               Volver
             </button>
           </div>

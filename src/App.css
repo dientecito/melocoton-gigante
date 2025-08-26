@@ -1,9 +1,28 @@
+/* Estilo base (desktop-first) */
 #root {
   max-width: 1280px;
   margin: 0 auto;
   padding: 2rem;
   text-align: center;
 }
+
+/* Para pantallas pequeñas (ej. móviles) */
+@media (max-width: 768px) {
+  #root {
+    padding: 1rem;
+    text-align: left; /* mejor alineado en móvil */
+  }
+
+  .card {
+    padding: 1rem;
+  }
+
+  .logo {
+    height: 4em;
+    padding: 1em;
+  }
+}
+
 
 .logo {
   height: 6em;
