@@ -1,0 +1,74 @@
+.gallery-container {
+  padding: 2rem;
+  text-align: center;
+  color: #fff;
+}
+
+/* H1 invisible pero SEO-friendly */
+.gallery-title {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0,0,0,0);
+  white-space: nowrap;
+  border: 0;
+}
+
+/* Grid de imágenes */
+.gallery-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 1.5rem;
+}
+
+/* Cada imagen */
+.gallery-item {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+  border-radius: 16px;
+  cursor: pointer;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  /* background-color eliminado para que sea transparente */
+}
+
+.gallery-item:hover {
+  transform: scale(1.05);
+}
+
+/* Imagen */
+.gallery-img {
+  max-width: 100%;
+  max-height: 100%;
+  border-radius: 16px;
+  object-fit: contain; /* se ajusta dentro del contenedor sin recortar */
+  transition: transform 0.4s ease;
+  background: transparent; /* asegura transparencia si la imagen no llena todo */
+}
+
+.gallery-item:hover .gallery-img {
+  transform: scale(1.08);
+}
+
+/* --- Responsive --- */
+@media (max-width: 1024px) {
+  .gallery-grid {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+@media (max-width: 768px) {
+  .gallery-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 480px) {
+  .gallery-grid {
+    grid-template-columns: 1fr;
+  }
+}
