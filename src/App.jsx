@@ -5,9 +5,8 @@ import Footer from './components/Footer';
 import Home from './pages/Home';
 import Videos from './pages/Videos';
 import Music from './pages/Music';
-import Tour from './pages/Tour';
 import Gallery from './pages/Gallery';
-import Contact from './pages/Contact';
+import Tienda from './pages/Merch';
 import SplashScreen from './components/SplashScreen';
 import ScrollToTop from './components/ScrollToTop';
 
@@ -28,9 +27,7 @@ function App() {
               <Route path="/music" element={<Music />} />
               <Route path="/videos" element={<Videos />} />
               <Route path="/gallery" element={<Gallery />} />
-              <Route path="/tour" element={<Tour />} />
-              <Route path="/merch" element={<div>Tienda</div>} />
-              <Route path="/contact" element={<Contact />} />
+              <Route path="/merch" element={<Tienda />} />
             </Routes>
           </main>
           <Footer />

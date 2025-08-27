@@ -1,28 +1,45 @@
 /* ===== Header principal ===== */
 header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0.5rem 1rem;
   position: fixed;
   top: 0;
   width: 100%;
   z-index: 1000;
   background: rgba(0, 0, 0, 0.5);
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  padding: 1rem 2rem;
 }
 
 /* ===== Logo ===== */
 .logo {
   font-weight: bold;
   color: white;
-  font-size: clamp(1rem, 2.5vw, 1.5rem);
+  font-size: clamp(0.8rem, 5vw, 1.5rem); /* tamaño adaptable */
   white-space: nowrap;
+  flex-shrink: 1;  /* se reduce si hace falta */
+  flex-grow: 0;    /* no crece más de lo necesario */
+  overflow: visible; /* importante: que no se corte */
+  text-overflow: unset; /* eliminamos los "..." */
+  margin-right: 0.5rem; /* separa del botón */
+}
+
+/* Ajuste extra en móviles muy pequeños */
+@media (max-width: 480px) {
+  .logo {
+    font-size: 0.6rem; /* más pequeño en móviles */
+    white-space: normal; /* permite varias líneas */
+    margin-bottom: 0.5rem;
+    margin-top: 0.5rem;
+    text-align: center; /* centrado */
+    line-height: 1.2; /* mejor legibilidad */
+  }
 }
 
 /* ===== Botón menú hamburguesa ===== */
 .menu-toggle {
   display: none;
-  font-size: 1.8rem;
+  font-size: 1.2rem;
   background: none;
   border: none;
   color: white;
@@ -119,8 +136,10 @@ nav > a:hover {
 
   nav > a {
     margin: 0.5rem 0;
-    width: 90%;
+    width: 80%;
     text-align: center;
+    box-sizing: border-box;
+    padding: 0.4rem 0; /* reducir padding horizontal para alinear todos */
   }
 
   .social-icons {
