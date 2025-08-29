@@ -3,13 +3,18 @@ import './Gallery.css';
 
 const images = [
   'images/img_galeria/gallery1.jpg',
+  'images/img_galeria/gallery1_1.jpg',
   'images/img_galeria/gallery2.jpg',
   'images/img_galeria/gallery3.jpg',
   'images/img_galeria/gallery4.jpg',
   'images/img_galeria/gallery5.jpg',
+  'images/img_galeria/gallery5_1.jpg',
   'images/img_galeria/gallery6.jpg',
   'images/img_galeria/gallery7.jpg',
   'images/img_galeria/gallery8.jpg',
+  'images/img_galeria/gallery9.jpg',
+  'images/img_galeria/gallery10.jpg',
+  'images/img_galeria/gallery11.jpg',
 ];
 
 function Gallery() {

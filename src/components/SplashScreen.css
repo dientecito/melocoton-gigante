@@ -57,25 +57,25 @@
 }
 
 /* Texto curvado */
-/* Texto curvado detrás del melocotón */
 .splash-text {
   font-weight: bold;
   color: white;
   position: absolute;
-  top: 50%; /* empieza en el centro del melocotón */
+  top: 50%; 
   left: 50%;
   width: 500px;
   height: 200px;
   transform: translate(-50%, -30%) scale(0.2);
-  transition: transform 1.2s ease-in-out;
-  z-index: 0; /* poner detrás del melocotón */
+  transition: transform 1.2s ease-in-out, opacity 0.5s ease-in-out;
+  z-index: 0;
+  opacity: 0; /* 🔹 invisible por defecto */
 }
-
 
 .splash-text.open {
-  transform: translate(-50%, -50%) scale(1.5); 
-  /* -120% para moverlo arriba y scale 1.5 para agrandarlo */
+  transform: translate(-50%, -50%) scale(1.5);
+  opacity: 1; /* 🔹 aparece al abrir */
 }
+
 
 
 
