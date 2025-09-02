@@ -94,7 +94,72 @@ que me permita ser yo
 de verdad`, // recortado por brevedad
       image: "images/img_letras/restaurante_chino.jpg",
     },
-    "Opel Corsa": { text: "Letra de Opel Corsa...", image: "images/img_letras/opel_corsa.jpg" },
+    "Opel Corsa": { 
+      text:  `
+Siempre voy en el último vagón,
+llevándome el olor,
+buscando conexión.
+
+Nos han visto juntos,
+me es imposible recordar.
+Te vine a destrozar,
+ignora a los demás.
+
+Tengo fantasías en un Opel Corsa;
+me gustaba el negro,
+ahora me gusta el rosa.
+Y fue a salir el sol
+y nos puso bravos,
+queda gasolina
+pa’ llevarme al barrio.
+
+Estos días me siento vacía,
+y tengo que curarme,
+y no me acuerdo lo que hacía.
+Para tu instinto, que ha sido malo,
+mantenme viva,
+y cuando muera dame un calo.
+
+Le dijeron que era hija del Rock and Roll
+por no creer en el amor
+y no gustarle su brío.
+
+Consigo misma era solo ella,
+pero desde Madrid no se ven las estrellas.
+La boca tensa,
+me importa lo que piensas.
+La boca tensa,
+no me vengas con esas.
+
+La guitarra siempre fue mi única amiga.
+Luego vino el alcohol,
+la marihuana y las pastillas.
+Nunca necesité
+siempre tener pareja;
+mis amigas ya me cuidan,
+en mi única certeza.
+
+Una cerveza y altavoz,
+toalla para la hierba,
+un librito y al sol
+se te cura la cabeza.
+Por esta buena vida,
+doy gracias a mi viaje,
+que se escapó de mi padre,
+no hacían buena pareja.
+
+Me lo ha dado todo y más,
+estoy muy agradecido.
+La vida es lo más,
+aunque haya bachecitos.
+La vida es lo más,
+aunque haya bachecitos.
+
+…
+Solo se vive una vez.
+`,
+      
+      image: "images/img_letras/opel_corsa.jpg" },
     Maddi: { text: "🎻🎻🎻", image: "images/maddi.jpg" },
     "El Entendimiento": {
       text: `A menudo y sin querer, juzgo antes de conocer,
@@ -131,7 +196,40 @@ lanzao un boomerang que retorna: el entendimiento...`,
       extraImage: "images/img_letras/el_entendimiento_2.jpg",
     },
     Marta: { text: "🎹🎹🎹", image: "images/img_letras/marta.jpg" },
-    Lujuria: { text: "Letra de Lujuria...", image: "images/img_letras/lujuria.jpg" },
+    Lujuria: { text: `
+Es más grande mi deshonra, 
+es más grande...
+cuando me pienso contigo
+y siento anhelo y un vacío.
+
+Los mayores dicen
+que nunca fue demasiado tarde.
+Yo no creo en el destino,
+joven  mi padrino.
+
+Cuando me miro en el espejo,
+quiero verte en el reflejo.
+Quiero coger con tus manos,
+quiero comer con tu boca.
+Quiero ser toda la seda,
+que por la noche te arropa.
+Quiero cantarte mi pena
+y que te sepas la copla.
+
+Siempre la misma historia,
+los mismos errores cometo;
+y cuando ya te has ido
+es cuando me lamento.
+Los errores de siempre
+y con la misma gente…
+quien pudiera ayudarme
+a aprender a quererte.
+
+Y es más grande mi deshonra,
+y es más grande mi deshonra,
+es más grande mi deshonra…
+`, 
+      image: "images/img_letras/lujuria.jpg" },
     Ion: { text: "🎸🎸🎸", image: "images/img_letras/ion.jpg" },
     "Besos de Mariposa": { text: "Letra de Besos de Mariposa...", image: "images/img_letras/besos_de_mariposa.jpg" },
     Hipertensión: { text: "Letra de Hipertensión...", image: "images/img_letras/hipertension.jpg" },
@@ -212,9 +310,17 @@ lanzao un boomerang que retorna: el entendimiento...`,
         ) : (
           <div>
             <h3 className="song-title">{selectedSong}</h3>
-            <p className={`song-lyrics ${selectedSong === "Restaurante Chino" ? "two-columns" : ""}`}>
+            <p
+              className={`song-lyrics ${
+                selectedSong === "Restaurante Chino" || selectedSong === "Opel Corsa"
+                  ? "two-columns"
+                  : ""
+              }`}
+            >
               {lyrics[selectedSong].text}
             </p>
+
+
             <button className="back-button" onClick={() => setSelectedSong(null)}>
               Volver
             </button>
