@@ -247,7 +247,7 @@ Y es más grande mi deshonra,
 y es más grande mi deshonra,
 es más grande mi deshonra…
 `,image:"images/img_letras/lujuria.jpg"},Ion:{text:"🎸🎸🎸",image:"images/img_letras/ion.jpg"},"Besos de Mariposa":{text:"Letra de Besos de Mariposa...",image:"images/img_letras/besos_de_mariposa.jpg"},Hipertensión:{text:"Letra de Hipertensión...",image:"images/img_letras/hipertension.jpg"},"Aparición Divina":{text:"Letra de Aparición Divina...",image:"images/img_letras/aparicion_divina.jpg"},"No Quiero Saber":{text:`
-      No quiero saber
+No quiero saber
 lo bien que te lo estás pasando,
 no quiero saber
 lo guay que es este verano,
