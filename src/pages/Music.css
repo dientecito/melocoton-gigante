@@ -7,6 +7,7 @@
   flex-wrap: wrap; /* Permite que se ajusten las columnas */
 }
 
+
 .music-left {
   flex: 0 0 320px;
   margin-top: 6rem;

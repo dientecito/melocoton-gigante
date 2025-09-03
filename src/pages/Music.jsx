@@ -1,5 +1,6 @@
 import { useState } from "react";
 import "./Music.css";
+import Navbar from "../components/Navbar";
 
 function Music() {
   const songs = [
@@ -91,7 +92,7 @@ una cala en este mar.
 Estoy jodido, busco un amigo
 que me ayude a escampar,
 que me permita ser yo
-de verdad`, // recortado por brevedad
+de verdad`,
       image: "images/img_letras/restaurante_chino.jpg",
     },
     "Opel Corsa": { 
@@ -234,7 +235,34 @@ es más grande mi deshonra…
     "Besos de Mariposa": { text: "Letra de Besos de Mariposa...", image: "images/img_letras/besos_de_mariposa.jpg" },
     Hipertensión: { text: "Letra de Hipertensión...", image: "images/img_letras/hipertension.jpg" },
     "Aparición Divina": { text: "Letra de Aparición Divina...", image: "images/img_letras/aparicion_divina.jpg" },
-    "No Quiero Saber": { text: "Letra de No Quiero Saber...", image: "images/img_letras/no_quiero_saber.jpg" },
+    "No Quiero Saber": { text: `
+No quiero saber
+lo bien que te lo estás pasando,
+no quiero saber
+lo guay que es este verano,
+porque yo no estoy bien
+y no me importa cómo estés.
+
+Cuando tú estabas así,
+yo estaba ahí para ti;
+cuando tú estás así,
+las conversaciones no iban solamente de mí.
+
+¿Cuántas veces más
+vas a hablarme de lo mismo?
+Con esta mascarilla
+no ves que ya no sonrío.
+¿Cuántas aventuras?
+Esto ya no es lo mío.
+Deja de hablar de ti,
+o si no, me pego un tiro.
+
+Cuando tú estabas así,
+yo estaba ahí para ti;
+cuando tú estás así,
+las conversaciones no iban solamente de mí.
+ `, 
+      image: "images/img_letras/no_quiero_saber.jpg" },
   };
 
   const soundcloudLinks = {
@@ -255,8 +283,14 @@ es más grande mi deshonra…
 
   const [selectedSong, setSelectedSong] = useState(null);
 
+  // Función para resetear la canción cuando se hace clic en Music desde el Navbar
+  const resetSong = () => setSelectedSong(null);
+
   return (
     <div className="music-container">
+      {/* Navbar ahora recibe callback para reset */}
+      <Navbar onResetMusic={resetSong} />
+
       <div className="music-left">
         {!selectedSong ? (
           <>
@@ -319,7 +353,6 @@ es más grande mi deshonra…
             >
               {lyrics[selectedSong].text}
             </p>
-
 
             <button className="back-button" onClick={() => setSelectedSong(null)}>
               Volver

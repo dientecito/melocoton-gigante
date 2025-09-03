@@ -76,6 +76,27 @@
   opacity: 1; /* 🔹 aparece al abrir */
 }
 
+/* Contenedor del melocotón responsivo */
+@media (max-width: 900px) {
+  .peach-container {
+    --scale-mobile: 0.6; /* factor de reducción para móviles */
+  }
 
+  /* Animación de latido con escala base */
+  @keyframes heartbeat {
+    0%   { transform: scale(calc(var(--scale-mobile) * 1)); }
+    25%  { transform: scale(calc(var(--scale-mobile) * 1.05)); }
+    50%  { transform: scale(calc(var(--scale-mobile) * 1)); }
+    75%  { transform: scale(calc(var(--scale-mobile) * 1.05)); }
+    100% { transform: scale(calc(var(--scale-mobile) * 1)); }
+  }
 
+  /* Texto curvado escalable */
+  .splash-text {
+    transform: translate(-50%, -30%) scale(0.12);
+  }
 
+  .splash-text.open {
+    transform: translate(-50%, -50%) scale(1);
+  }
+}

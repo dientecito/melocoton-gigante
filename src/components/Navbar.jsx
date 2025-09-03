@@ -1,13 +1,28 @@
 import { useState } from 'react';
-import { Link } from 'react-router-dom';
+import { Link, useLocation } from 'react-router-dom';
 import './Navbar.css';
 
 // Importar los iconos desde la carpeta assets
 import instagramIcon from '../assets/instagram.svg';
 import youtubeIcon from '../assets/youtube.svg';
 
-function Navbar() {
+function Navbar({ onResetMusic }) { // <-- Recibe un callback opcional
   const [isOpen, setIsOpen] = useState(false);
+  const location = useLocation();
+
+  const handleLinkClick = (path) => {
+    setIsOpen(false);
+
+    // Scroll al top si ya estás en la misma ruta
+    if (location.pathname === path) {
+      window.scrollTo({ top: 0, behavior: 'smooth' });
+
+      // Si estás en Music, resetea la canción seleccionada
+      if (path === '/music' && onResetMusic) {
+        onResetMusic();
+      }
+    }
+  };
 
   return (
     <header>
@@ -18,11 +33,11 @@ function Navbar() {
       </button>
 
       <nav className={isOpen ? 'open' : ''}>
-        <Link to="/" onClick={() => setIsOpen(false)}>Inicio</Link>
-        <Link to="/music" onClick={() => setIsOpen(false)}>Music</Link>
-        <Link to="/videos" onClick={() => setIsOpen(false)}>Videos</Link>
-        <Link to="/gallery" onClick={() => setIsOpen(false)}>Galería</Link>
-        <Link to="/merch" onClick={() => setIsOpen(false)}>Tienda</Link>
+        <Link to="/" onClick={() => handleLinkClick('/')}>Inicio</Link>
+        <Link to="/music" onClick={() => handleLinkClick('/music')}>Music</Link>
+        <Link to="/videos" onClick={() => handleLinkClick('/videos')}>Videos</Link>
+        <Link to="/gallery" onClick={() => handleLinkClick('/gallery')}>Galería</Link>
+        <Link to="/merch" onClick={() => handleLinkClick('/merch')}>Tienda</Link>
 
         <div className="social-icons">
           <a
